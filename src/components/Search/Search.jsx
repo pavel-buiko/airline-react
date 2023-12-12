@@ -2,11 +2,14 @@ import React, {useEffect} from 'react'
 import {HiOutlineLocationMarker} from "react-icons/hi"
 import {RiAccountPinCircleLine} from "react-icons/ri"
 import {RxCalendar} from "react-icons/rx"
-
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
 import Aos from "aos"
 
 import "aos/dist/aos.css"
 
+new AirDatepicker('#dateOne');
+new AirDatepicker('#dateTwo')
 const Search = () => {
 
   useEffect (()=> {
@@ -66,7 +69,7 @@ const Search = () => {
             </div>
             <div className="texts">
               <h4>Check In</h4>
-              <input type="text" placeholder='Добавить дату' />
+              <input id='dateOne' type="text" placeholder='Добавить дату' />
             </div>
           </div>
 
@@ -76,7 +79,7 @@ const Search = () => {
             </div>
             <div className="texts">
               <h4>Check Out</h4>
-              <input type="text" placeholder='Добавить дату' />
+              <input  id='dateTwo' type="text" placeholder='Добавить дату' />
             </div>
           </div>
 

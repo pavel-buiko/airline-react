@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 * {
   padding: 0;
@@ -30,6 +31,8 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--textColor);
+  padding: 0;
 }
 
 li {
@@ -176,6 +179,14 @@ h2 {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+  .navBar .navBarMenu .menu .listButton {
+    cursor: pointer;
+    color: var(--blackColor);
+  }
+  .navBar .navBarMenu .menu .listButton:hover {
+    color: var(--PrimaryColor);
+    font-weight: 700;
   }
   .navBar .navBarMenu .menu .listItem {
     padding: 0.5rem 0;
@@ -940,10 +951,11 @@ h2 {
   border-radius: 10px;
 }
 
-body {
+.frame {
   height: 100vh;
   width: 100%;
   background: var(--blackColor);
+  box-sizing: border-box;
 }
 
 .slider {
@@ -953,26 +965,22 @@ body {
   height: 100vh;
   width: 100%;
 }
-
-.sliderContainer {
+.slider .sliderContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
 }
-
-.sliderText {
+.slider .sliderContainer .sliderText {
   text-align: center;
 }
-
-.textTitle {
+.slider .sliderContainer .sliderText .textTitle {
   font-size: 2.5rem;
   color: var(--whiteColor);
   text-transform: uppercase;
   font-weight: 700;
 }
-
-.text {
+.slider .sliderContainer .sliderText .text {
   font-size: 1rem;
   color: var(--whiteColor);
   margin: 1rem 0;
@@ -990,24 +998,21 @@ body {
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
 }
+.sliderBtn:hover {
+  transform: scale(0.95);
+}
 
 .featureBtn {
   background: #fff;
   text-transform: uppercase;
   border: none;
-  color: #444;
-  border: 1px solid #444;
-  outline: none;
+  color: var(--blackColor);
   font-weight: 700;
   padding: 0.8rem 2rem;
   cursor: pointer;
 }
 .featureBtn:hover {
   background: var(--borderColor);
-}
-
-.sliderBtn:hover {
-  transform: scale(0.95);
 }
 
 @keyframes fadeIn {
@@ -1020,4 +1025,94 @@ body {
 }
 .fadeIn {
   animation: fadeIn 0.5s;
+}
+
+@media screen and (max-width: 680px) {
+  .sliderBtn {
+    margin: 0.3rem;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sliderBtn {
+    margin: 0.3rem;
+    font-size: 1.3rem;
+    padding: 0.1rem;
+  }
+  .textTitle {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+  }
+  .featureBtn {
+    margin-top: 10px;
+    padding: 0.7rem;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cardsContainer {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .travelCards {
+    padding: 0px !important;
+  }
+}
+.travelCards {
+  color: var(--whiteColor);
+  text-align: center;
+}
+.travelCards .sectionContainer {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.travelCards .sectionContainer .cardsContainer {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+.travelCards .sectionContainer .cardsContainer .singleCard {
+  position: relative;
+  height: 600px;
+  width: 85%;
+  max-width: 550px;
+  overflow: hidden;
+  gap: 1rem;
+  margin: auto;
+  border-radius: 5rem;
+}
+.travelCards .sectionContainer .cardsContainer .singleCard .cardImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.travelCards .sectionContainer .cardsContainer .singleCard .cardPicture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.travelCards .sectionContainer .cardsContainer .singleCard .cardText {
+  text-align: center;
+  background-color: var(--blackColor);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* Исправлено: добавлено смещение по вертикали (-50%) */
+  height: -moz-max-content;
+  height: max-content;
+  z-index: 1;
+  /* Положительное значение для текста, чтобы он находился выше изображения */
+}
+.travelCards .sectionContainer .cardsContainer .singleCard .cardText .text {
+  padding-bottom: 3rem;
+}
+.travelCards .sectionContainer .cardsContainer .singleCard .cardText h4 {
+  color: var(--whiteColor);
 }/*# sourceMappingURL=index.css.map */

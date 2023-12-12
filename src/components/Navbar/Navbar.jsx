@@ -65,7 +65,7 @@ window.addEventListener("scroll", addBgColor)
         <ul className="menu flex">
           <li onClick={removeNavBar} className="listItem">Главная</li>
           <li onClick={removeNavBar}  className="listItem">О Нас</li>
-          <li onClick={removeNavBar} className="listItem">Предложения</li>
+          <li onClick={removeNavBar} className="listItem"><a className="listButton" href="/offers">Предложения</a></li>
           <li onClick={removeNavBar} className="listItem">Места</li>
           <li onClick={removeNavBar} className="listItem">Назначение</li>
           <button className="btn flex btnTwo">Связаться</button>

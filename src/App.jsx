@@ -1,11 +1,17 @@
 import {MainFrame} from "./MainFrame";
 import Frame from "./Frame"
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
 function App() {
   return (
     <>
-      <Frame/>
-      {/* <MainFrame /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" Component={MainFrame} />
+          <Route path="/offers" Component={Frame} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -14,7 +14,7 @@ const Support = () => {
   return (
     <div className="support container section">
       <div className="sectionContainer">
-        <div className="titlesDiv">
+        <div data-aos= "fade-up" data-aos-duration="2500" className="titlesDiv">
           <small>Поддержка</small>
           <h2>Планируйте ваши путешествия с уверенностью </h2>
           <p>
