@@ -75,7 +75,7 @@ const Footer = () => {
           </li>
         </div>
 
-        <div data-aos= "fade-left" data-aos-duration="2500" className="footerLinks">
+        <div data-aos= "fade-right" data-aos-duration="2500" className="footerLinks">
           <span className="linkTitle">
             Информация
           </span>

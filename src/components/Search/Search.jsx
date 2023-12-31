@@ -9,7 +9,7 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 
 new AirDatepicker('#dateOne');
-new AirDatepicker('#dateTwo')
+new AirDatepicker('#dateTwo');
 const Search = () => {
 
   useEffect (()=> {

@@ -24,7 +24,7 @@ const Slider = ({ images }) => {
         <div className="sliderText">
           <h1 className="textTitle">Мечты Сбываюся</h1>
           <p ref={slideText} className="text"></p>
-          <a href="/home">
+          <a href="/">
             <button className="featureBtn btn">Присоедениться</button>
           </a>
         </div>
