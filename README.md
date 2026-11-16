@@ -1,8 +1,12 @@
-# React + Vite
+# Airline React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An airline landing page built with React, Vite, and SCSS. It includes a flight-search form mockup, travel and lounge sections, a newsletter form, and scroll animations using AOS. Flight search and subscriptions are presented as UI prototypes.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+npm ci
+npm run dev
+```
+
+Start with [src/App.jsx](src/App.jsx) for the page layout, [src/components](src/components) for the sections, and [src/index.scss](src/index.scss) for styles. Run `npm run build` to create a static build.
